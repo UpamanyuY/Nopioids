@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Grabbable
   - Gunk
+  - Drill
+  - Forcept
   layers:
   - Default
   - TransparentFX
