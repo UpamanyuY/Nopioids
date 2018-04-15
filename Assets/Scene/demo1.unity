@@ -125,8 +125,8 @@ GameObject:
   - component: {fileID: 77580523}
   - component: {fileID: 77580522}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: B1
+  m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1126,8 +1126,8 @@ GameObject:
   - component: {fileID: 1825728923}
   - component: {fileID: 1825728922}
   m_Layer: 0
-  m_Name: Cube (2)
-  m_TagString: Untagged
+  m_Name: N1
+  m_TagString: Nerve
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1210,8 +1210,8 @@ GameObject:
   - component: {fileID: 2039773422}
   - component: {fileID: 2039773421}
   m_Layer: 0
-  m_Name: Cube (3)
-  m_TagString: Untagged
+  m_Name: D1
+  m_TagString: Disk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

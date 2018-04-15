@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Grabbable
   - Gunk
+  - Bone
+  - Nerve
+  - Disk
   layers:
   - Default
   - TransparentFX
