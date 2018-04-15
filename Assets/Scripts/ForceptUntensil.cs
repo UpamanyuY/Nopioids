@@ -35,8 +35,11 @@ public class ForceptUntensil : MonoBehaviour {
             {
                 if (grabobject != null)
                 {
-                    Destroy(grabobject);
+                    //Destroy(grabobject);
                     grabobject = null;
+                    grabbed = false;
+                    RaycastLength = 0;
+
                 }
             }
 
@@ -46,7 +49,6 @@ public class ForceptUntensil : MonoBehaviour {
 				grabobject.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
 				grabobject = null;
 				grabbed = false;
-				RaycastLength = 0;
 			}*/
         }
 
