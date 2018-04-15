@@ -12,6 +12,7 @@ TagManager:
   - Drill
   - Forcepts
   - Shield
+  - Forcept
   layers:
   - Default
   - TransparentFX
@@ -21,14 +22,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Needle
+  - GuideWire
+  - Scalpel
+  - Dilator
+  - Canula
+  - Endoscope
+  - Drill
+  - Forcept
   - 
   - 
   - 
