@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Grabbable
   - Gunk
+  - Bone
+  - Nerve
+  - Disk
+  - Drill
+  - Forcepts
+  - Shield
   layers:
   - Default
   - TransparentFX
