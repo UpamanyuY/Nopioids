@@ -13,6 +13,7 @@ TagManager:
   - Forcepts
   - Shield
   - Forcept
+  - Tools
   layers:
   - Default
   - TransparentFX
@@ -28,8 +29,8 @@ TagManager:
   - Dilator
   - Canula
   - Endoscope
-  - Drill
-  - Forcept
+  - Tool
+  - 
   - 
   - 
   - 

@@ -16,42 +16,35 @@ public class StepByStep : MonoBehaviour {
 	void Update () {
         switch (Steps)
         {
+            //GuideWire
             case 1:
-
              
                 break;
 
+            //Scalpel
             case 2:
-
                 
                 break;
 
+            //Dilator
             case 3:
-
                
                 break;
 
+            //Canula
             case 4:
-
                
                 break;
 
+            //Endoscope
             case 5:
               
                 break;
 
+            //Tool
             case 6:
                
                 break;
-
-            case 7:
-                
-                break;
-
-            case 8:
-               
-                break;
-
 
             //Needle
             default:
@@ -68,41 +61,41 @@ public class StepByStep : MonoBehaviour {
         //Needle
         if (other.gameObject.layer == 8)
         {
-
+            Steps += 1;
         }
 
+        //GuideWire
         if (other.gameObject.layer == 9)
         {
 
         }
 
+        //Scalpel
         if (other.gameObject.layer == 10)
         {
 
         }
 
+        //Dilator
         if (other.gameObject.layer == 11)
         {
 
         }
 
+        //Canula
         if (other.gameObject.layer == 12)
         {
 
         }
 
+        //Endoscope
         if (other.gameObject.layer == 13)
         {
 
         }
 
-
+        //Tool
         if (other.gameObject.layer == 14)
-        {
-
-        }
-
-        if (other.gameObject.layer == 15)
         {
 
         }
