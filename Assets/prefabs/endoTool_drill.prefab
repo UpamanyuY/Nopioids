@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 64968297009891480}
   - component: {fileID: 114250413751639104}
   - component: {fileID: 114157221166440100}
+  - component: {fileID: 114911121097897718}
   m_Layer: 0
   m_Name: shaft
   m_TagString: Untagged
@@ -183,7 +184,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081111487265868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -1.5, z: -62.5}
+  m_LocalPosition: {x: -957.5343, y: -163.17293, z: -472.56854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4670428809785330}
@@ -21111,3 +21112,15 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114911121097897718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1503817894751622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd89c0863585d94f8f538ac6aedbf06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spin: 0
