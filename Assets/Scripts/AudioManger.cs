@@ -5,17 +5,18 @@ using System;
 using UnityEngine;
 
 
-public class LB_audioManager : MonoBehaviour {
+public class AudioManager : MonoBehaviour
+{
 
-    public LB_sound[] sounds;
+    public Sound[] sounds;
 
 
-    public static LB_audioManager instance;
+    public static AudioManager instance;
 
     public float volume;
 
-	// Use this for initialization
-	void Awake () 
+    // Use this for initialization
+    void Awake ()
     {
 
         if (instance == null)
@@ -28,7 +29,7 @@ public class LB_audioManager : MonoBehaviour {
 
         DontDestroyOnLoad (gameObject);
 
-	    foreach (LB_sound s in sounds)
+        foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource> ();
             s.source.clip = s.clip;
@@ -37,24 +38,25 @@ public class LB_audioManager : MonoBehaviour {
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-    	
-	}
+
+    }
 
     private void Start ()
-        {
-        Play ("Theme");
-        }
+    {
+        Play ("ACLoop");
+        Play ("BeepLoop");
+    }
 
     public void Play (string clipName)
+    {
+        Sound s = Array.Find (sounds, sound => sound.clipName == clipName);
+        if (s == null)
         {
-            LB_sound s = Array.Find (sounds, sound => sound.clipName == clipName);
-                if (s == null)
-                {
-                     Debug.LogWarning ("Sound: " + clipName + " not found!");
-                     return;
-                 }
-
-            s.source.Play ();
+            Debug.LogWarning ("Sound: " + clipName + " not found!");
+            return;
         }
- 
+
+        s.source.Play ();
+    }
+
 }
