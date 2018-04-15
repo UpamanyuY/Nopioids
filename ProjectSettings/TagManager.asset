@@ -9,6 +9,9 @@ TagManager:
   - Bone
   - Nerve
   - Disk
+  - Drill
+  - Forcepts
+  - Shield
   layers:
   - Default
   - TransparentFX
