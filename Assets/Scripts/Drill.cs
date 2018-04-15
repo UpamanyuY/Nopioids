@@ -24,7 +24,7 @@ public class Drill : MonoBehaviour
     }
     public void Update()
     {
-        transform.Rotate(0, spin, 0);
+		transform.Rotate(0, 0, spin);
 
         if (Input.GetButtonDown("Fire1"))
         {
