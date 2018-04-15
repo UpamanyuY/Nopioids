@@ -4,6 +4,8 @@ using UnityEngine;
 
 
 public class VRHands : MonoBehaviour {
+
+    Forcepts grab;
     private Valve.VR.EVRButtonId gripbutton = Valve.VR.EVRButtonId.k_EButton_Grip;
     public bool gripButtonDown = false;
     public bool gripButtonUp = false;
@@ -14,15 +16,22 @@ public class VRHands : MonoBehaviour {
     public bool triggerButtonUp = false;
     public bool triggerButtonPressed = false;
 
+    Vector3 RHand;
+    Vector3 LHand;
+
     private SteamVR_Controller.Device controller { get { return SteamVR_Controller.Input((int)trackedObj.index); } }
     private SteamVR_TrackedObject trackedObj;
     // Use this for initialization
-    void Start () {
+    void Start() {
+        grab = GetComponent<Forcepts>();
         trackedObj = GetComponent<SteamVR_TrackedObject>();
+
+        RHand = GameObject.Find("Controller (right)").transform.localPosition;
+        LHand = GameObject.Find("Controller (left)").transform.localPosition;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+        // Update is called once per frame
+        void Update () {
         Controls();
 
     }
@@ -66,10 +75,10 @@ public class VRHands : MonoBehaviour {
 
      void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Grabbable" && triggerButtonPressed)
+        if(other.tag == "Gunk" && triggerButtonPressed)
         {
             Debug.Log("We are IN");
-            other.transform.localPosition = transform.parent.localPosition;
+            grab.Grab();
         }
     }
 }
