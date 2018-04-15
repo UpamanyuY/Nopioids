@@ -2,24 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drill : MonoBehaviour {
-
+public class Drill : MonoBehaviour
+{
+    BoneHealth health; 
     public float spin;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
 
+    public void Start()
+    {
+        health = GameObject.Find("Bone").GetComponent<BoneHealth>();
+
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        if (gameObject.tag == ("Bone"))
+        {
+
+            health.TakeDamage(10);
+        }
+    }
+    public void Update()
+    {
         transform.Rotate(0, spin, 0);
 
         if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("spinning");
             spin = 5;
+
+
         }
-	}
+    }
 }
+   
+
