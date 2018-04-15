@@ -8,7 +8,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
 
-    public Sound[] sounds;
+    public Sounds[] sounds;
 
 
     public static AudioManager instance;
@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad (gameObject);
 
-        foreach (Sound s in sounds)
+        foreach (Sounds s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource> ();
             s.source.clip = s.clip;
@@ -49,7 +49,7 @@ public class AudioManager : MonoBehaviour
 
     public void Play (string clipName)
     {
-        Sound s = Array.Find (sounds, sound => sound.clipName == clipName);
+        Sounds s = Array.Find (sounds, sound => sound.clipName == clipName);
         if (s == null)
         {
             Debug.LogWarning ("Sound: " + clipName + " not found!");
