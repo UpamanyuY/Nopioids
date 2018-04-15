@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114467213167197594}
   m_Layer: 0
   m_Name: workTube
-  m_TagString: Untagged
+  m_TagString: Tools
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 127
