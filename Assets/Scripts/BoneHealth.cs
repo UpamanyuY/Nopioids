@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BoneHealth : MonoBehaviour {
 
-    public int maxHealth = 150;
-    public int curHealth;
+    public float maxHealth = 150;
+    public float curHealth;
    
    
 	// Use this for initialization
@@ -17,10 +17,12 @@ public class BoneHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Debug.Log(curHealth);
+
+        DestroyBone();
 	}
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
-        curHealth -= amount;
+        curHealth -= amount * Time.deltaTime;
         
     }
     public void DestroyBone()
@@ -29,6 +31,21 @@ public class BoneHealth : MonoBehaviour {
         {
             curHealth = 0;
             Destroy(this.gameObject);
+        }
+    }
+
+    void OnTriggerEnter()
+    {
+
+    }
+
+    void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.tag == "Drill")
+        {
+
+            TakeDamage(10);
+            Debug.Log("dmage");
         }
     }
 }

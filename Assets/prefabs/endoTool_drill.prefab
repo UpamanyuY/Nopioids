@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 64968297009891480}
   - component: {fileID: 114250413751639104}
   - component: {fileID: 114157221166440100}
-  - component: {fileID: 114911121097897718}
   m_Layer: 0
   m_Name: shaft
   m_TagString: Untagged
@@ -105,6 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4139604126830444}
+  - component: {fileID: 114903227773038110}
   m_Layer: 0
   m_Name: drillPivot
   m_TagString: Untagged
@@ -144,10 +144,11 @@ GameObject:
   - component: {fileID: 23395678030962624}
   - component: {fileID: 33732618200285722}
   - component: {fileID: 114227919532972220}
-  - component: {fileID: 64617205907981580}
+  - component: {fileID: 54540527495896766}
+  - component: {fileID: 65058546511968790}
   m_Layer: 0
   m_Name: drillBit
-  m_TagString: Untagged
+  m_TagString: Drill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +200,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081111487265868}
   m_LocalRotation: {x: 0.0000015050173, y: 0.00000026077032, z: -0.70710653, w: 0.7071071}
-  m_LocalPosition: {x: 0.10965, y: 0.00784, z: -0.1431}
+  m_LocalPosition: {x: 0, y: 0, z: -0.791}
   m_LocalScale: {x: 0.00036215113, y: 0.00028875147, z: 0.0004054884}
   m_Children:
   - {fileID: 4672736677943042}
@@ -577,6 +578,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1739940054449634}
   m_Mesh: {fileID: 0}
+--- !u!54 &54540527495896766
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611096517089220}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &64129009365663626
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -597,20 +613,6 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122844729102198}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
---- !u!64 &64617205907981580
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1611096517089220}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -661,6 +663,18 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!65 &65058546511968790
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611096517089220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0021148, y: 0.02478075, z: 1.0056427}
+  m_Center: {x: -0.0010571778, y: 0.9888587, z: -0.00785695}
 --- !u!114 &114157221166440100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21141,12 +21155,12 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!114 &114911121097897718
+--- !u!114 &114903227773038110
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1503817894751622}
+  m_GameObject: {fileID: 1583977303272336}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3dd89c0863585d94f8f538ac6aedbf06, type: 3}
